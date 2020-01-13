@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Arena Collection</title>
+  <link rel="icon" href="./favicon.jfif">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href=" https://github.com/FortAwesome/Font-Awesome/issues/5019" rel="stylesheet">
+  <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!--Top bar nav-->
+  <div class="top-bar foundation-5-top-bar">
+    <div id="responsive-menu">
+      <div class="top-bar-left">
+        <ul class=" medium-horizontal menu" data-responsive-menu="drilldown medium-dropdown" data-auto-height="true"
+          data-animate-height="true">
+          <li><input id="input" type="search" placeholder="Search"></li>
+          <li><button id="search" type="button" class="button mainSearchButton ">S
+            </button></li>
+          <li id="white">
+            <button class="color-filter nav-filter W" value="W" href="#"><img alt="{W}"
+                src="https://gamepedia.cursecdn.com/mtgsalvation_gamepedia/8/8e/W.svg?version=4cfe7054aba65596dc7cd79cf9d61d01"
+                decoding="async" width="25" height="25"></button></li>
+          <li id="blue">
+            <button class="color-filter nav-filter U" value="U" href="#"><img alt="{U}"
+                src="https://gamepedia.cursecdn.com/mtgsalvation_gamepedia/9/9f/U.svg?version=242e3a0c1616389c9f09510d598dc5c0"
+                width="25" height="25"></button></li>
+          <li id="black">
+            <button class="color-filter nav-filter B" value="B" href="#"><img alt="{B}"
+                src="https://gamepedia.cursecdn.com/mtgsalvation_gamepedia/2/2f/B.svg?version=019551d4756f33e6432aaa8dcc0966f8"
+                width="25" height="25"></button></li>
+          <li id="red">
+            <button class="color-filter nav-filter R" value="R" href="#"><img alt="{R}"
+                src="https://gamepedia.cursecdn.com/mtgsalvation_gamepedia/8/87/R.svg?version=5549fbad7279775e94ad0ae307a289a1"
+                width="25" height="25"></button></li>
+          <li id="green">
+            <button class="color-filter nav-filter G" value="G" href="#"><img alt="{G}"
+                src="https://gamepedia.cursecdn.com/mtgsalvation_gamepedia/8/88/G.svg?version=df0df93e1e913211caca79c573e08235"
+                width="25" height="25"></button></li>
+          <li id="colorless">
+            <button class="color-filter nav-filter C" value="C" href="#"><img alt="{C}"
+                src="https://gamepedia.cursecdn.com/mtgsalvation_gamepedia/1/1a/C.svg?version=e56220986714ca2913b90a938b196a9e"
+                width="25" height="25"></button></li>
+          <li id="multi-color">
+            <button class="multi-color nav-filter M" value="M" href="#"><img
+                src="https://gamepedia.cursecdn.com/mtgsalvation_gamepedia/3/3e/M.svg"
+                alt="Image result for multi color icon  Magic the gathering mana symbols" width="25"
+                height="25"></button>
+          </li>
+          <li id="advancedSearch"><button href="#">Advanced</button></li>
+          <li><button class="found"><a href="#">Cards Found:</a> </button></li>
+
+        </ul>
+      </div>
+      <div class="top-bar-right">
+        <ul class="menu">
+          <li><button class="button openbtn openDeck" onclick="openNav()">Deck</button></li>
+          <li><button onclick="openFullscreen()"><img width="35" height="35"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD37GaSoL0tgAPRUcyD0CoRkZwjYxLlm9iaUDx_XvIvdkNEsIX&amp;s"
+                alt="Image result for full screen icon"></button></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="collection">
+    <div id="carouselExampleControls" class="carousel slide">
+      <div class="carousel-inner" id="collection">
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+    <div id="mySidebar" class="sidebar">
+      <button class="button curve-view">Curve-View</button>
+      <span class="deck-count">0/60 Cards</span>
+      <div class=" container ">
+        <div class="row">
+          <div id="cmc1" class="cmc-col col-md-12">
+          </div>
+          <div id="cmc2" class="cmc-col col-md-12">
+          </div>
+          <div id="cmc3" class="cmc-col col-md-12">
+          </div>
+          <div id="cmc4" class="cmc-col col-md-12">
+          </div>
+          <div id="cmc5" class="cmc-col col-md-12">
+          </div>
+          <div id="cmc6" class="cmc-col col-md-12">
+          </div>
+          <div id="cmcLand" class="cmc-col col-md-12">
+          </div>
+        </div>
+      </div>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <button class="button saveButton export" title="Copy to Clipboard">Export</button>
+    </div>
+
+    <div id="my-bottom-bar" class="bottom-bar">
+      <span class="deck-count">0/60 Cards</span>
+      <div class=" container ">
+        <div class="row">
+          <div class="cmc1 col-md-2 curve-col">
+          </div>
+          <div class="cmc2 col-md-2 curve-col">
+          </div>
+          <div class="cmc3 col-md-2 curve-col">
+          </div>
+          <div class="cmc4 col-md-2 curve-col">
+          </div>
+          <div class="cmc5 col-md-2 curve-col">
+          </div>
+          <div class="cmc6 col-md-2 curve-col">
+          </div>
+        </div>
+      </div>
+      <button class="button curve-view">Curve-View</button>
+      <div>
+      <button class="button saveButton export export-bottom">Export</button>
+
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 hover-div">
+        <img class="temp-img" src="" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="modal">
+    <div class="modal-header">
+      <span class="close-btn">&times;</span>
+    </div>
+
+  <div class="modal" id="message">
+    <div class="modal-content">
+      <h5>Deck list copied to clipboard</h5>
+      <button class="modal-message">OK</button>
+    </div>
+  </div>
+
+  <div class="modal" id="modal">
+    <div class="modal-header">
+      <span class="close-btn">&times;</span>
+    </div>
+    <div class="modal-content">
+      <h2>Advanced Filters</h2>
+      <div class="iconButtons">
+        <button class="color-filter modal-color-button modalNumButtons W" value="W">
+          <img alt="{W}"
+            src="https://gamepedia.cursecdn.com/mtgsalvation_gamepedia/8/8e/W.svg?version=4cfe7054aba65596dc7cd79cf9d61d01"
+            decoding="async" width="50" height="50">
+        </button>
+        <button class="color-filter modal-color-button modalNumButtons U" value="U">
+          <img alt="{U}"
+            src="https://gamepedia.cursecdn.com/mtgsalvation_gamepedia/9/9f/U.svg?version=242e3a0c1616389c9f09510d598dc5c0"
+            width="50" height="50">
+        </button>
+        <button class="color-filter modal-color-button modalNumButtons B" value="B">
+          <img alt="{B}"
+            src="https://gamepedia.cursecdn.com/mtgsalvation_gamepedia/2/2f/B.svg?version=019551d4756f33e6432aaa8dcc0966f8"
+            width="50" height="50">
+        </button>
+        <button class="color-filter modal-color-button modalNumButtons R" value="R">
+          <img alt="{R}"
+            src="https://gamepedia.cursecdn.com/mtgsalvation_gamepedia/8/87/R.svg?version=5549fbad7279775e94ad0ae307a289a1"
+            width="50" height="50">
+        </button>
+        <button class="color-filter modal-color-button modalNumButtons G" value="G">
+          <img alt="{G}"
+            src="https://gamepedia.cursecdn.com/mtgsalvation_gamepedia/8/88/G.svg?version=df0df93e1e913211caca79c573e08235"
+            width="50" height="50">
+        </button>
+        <button class="color-filter modal-color-button modalNumButtons C" value="C">
+          <img alt="{C}"
+            src="https://gamepedia.cursecdn.com/mtgsalvation_gamepedia/1/1a/C.svg?version=e56220986714ca2913b90a938b196a9e"
+            width="50" height="50">
+        </button>
+        <button class="multi-color modal-color-button modalNumButtons M" value="M">
+          <img src="https://gamepedia.cursecdn.com/mtgsalvation_gamepedia/3/3e/M.svg"
+            alt="Image result for multi color icon  Magic the gathering mana symbols" width="50" height="50">
+        </button>
+        </br>
+        <button class="modalNumButtons number-filter" value=0>0</button>
+        <button class="modalNumButtons number-filter" value=1>1</button>
+        <button class="modalNumButtons number-filter" value=2>2</button>
+        <button class="modalNumButtons number-filter" value=3>3</button>
+        <button class="modalNumButtons number-filter" value=4>4</button>
+        <button class="modalNumButtons number-filter" value=5>5</button>
+        <button class="modalNumButtons number-filter" value=6>6</button>
+        <button class="modalNumButtons number-filter" value=7>7+</button>
+        </br>
+        <button class="modalAdvanceButtons rarity-filter" value="common">Common</button>
+        <button class="modalAdvanceButtons rarity-filter" value="uncommon">Uncommon</button>
+        <button class="modalAdvanceButtons rarity-filter" value="rare">Rare</button>
+        <button class="modalAdvanceButtons rarity-filter" value="mythic">Mythic Rare</button>
+        </br>
+        <button class="modalAdvanceButtons type-filter" value="Creature">Creature</button>
+        <button class="modalAdvanceButtons type-filter" value="Planeswalker">Planeswalker</button>
+        <button class="modalAdvanceButtons type-filter" value="Instant">Instant</button>
+        <button class="modalAdvanceButtons type-filter" value="Sorcery">Sorcery</button>
+        <button class="modalAdvanceButtons type-filter" value="Enchantment">Enchantment</button>
+        <button class="modalAdvanceButtons type-filter" value="Artifact">Artifact</button>
+        <button class="modalAdvanceButtons type-filter" value="Land">Land</button>
+
+        </br>
+        <button class="modalAdvanceButtons set-filter" value="%3Axln">Ixalan</button>
+        <button class="modalAdvanceButtons set-filter" value="%3Arix">Rivals of Ixalan</button>
+        <button class="modalAdvanceButtons set-filter" value="%3Am19">Core 2019</button>
+        <button class="modalAdvanceButtons set-filter" value="%3Adom">Dominaria</button>
+        <button class="modalAdvanceButtons set-filter" value="%3Agrn">Guilds of Ravnica</button>
+        <button class="modalAdvanceButtons set-filter" value="%3Arna">Ravnica Allegiance</button>
+        <button class="modalAdvanceButtons set-filter" value="%3Awar">War of the Spark</button>
+        <button class="modalAdvanceButtons set-filter" value="%3Am20">Core 2020</button>
+        <button class="modalAdvanceButtons set-filter" value="%3Aeld">Throne of Eldraine</button>
+        </br>
+        <button id="reset">Reset</button>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

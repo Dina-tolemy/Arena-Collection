@@ -1,0 +1,438 @@
+ .foundation-5-top-bar {
+   background: #333;
+   color: #fefefe;
+ }
+ .foundation-5-top-bar .menu {
+   background: #333;
+ }
+ 
+ .foundation-5-top-bar .is-dropdown-submenu {
+   border: 0;
+ }
+ .foundation-5-top-bar .is-dropdown-submenu-item.opens-right a::after {
+   border-color: transparent transparent transparent #fefefe;
+ }
+ .foundation-5-top-bar .js-drilldown-back > a::before {
+   border-color: transparent #fefefe transparent transparent;
+ }
+ 
+ .foundation-5-top-bar .is-drilldown-submenu-parent > a::after {
+   border-color: transparent transparent transparent #fefefe;
+ }
+ 
+ .foundation-5-top-bar .dropdown.menu.medium-horizontal > li.is-dropdown-submenu-parent > a::after {
+   border-color: #fefefe transparent transparent;
+ }
+ 
+ 
+ #advancedSearch {
+   background: rgba(240, 197, 57, 0.938);
+   border-radius: 1em;
+   color: black;
+   font-display: bolder;
+   font-size: medium;
+ }
+ 
+ .cardImgs {
+   transition: transform .2s;
+   overflow: hidden;
+ }
+ 
+ .cardImgs:hover {
+   -webkit-transform: scale(1.8);
+   -moz-transform: scale(1.8);
+   -ms-transform: scale(1.8);
+   -o-transform: scale(1.8);
+   transform: scale(1.8);
+   position: relative;
+   top:33%;
+   z-index: 1;
+ }
+ 
+ .modal {
+   display: none;
+   position: fixed;
+   padding-top: 50px;
+   margin: auto;
+   width: 80%;
+   height: 80%;
+   background-color: rgb(0, 0, 0);
+   background-color: rgba(0, 0, 0, 0.5);
+ }
+ 
+ .modal-content {
+   position: relative;
+   background-color: rgba(240, 197, 57, 0.938);
+   padding: 20px;
+   margin: auto;
+   width: 70%;
+   height: 70%;
+   -webkit-animation-name: animatetop;
+   -webkit-animation-duration: 0.4s;
+   animation-name: animatetop;
+   animation-duration: 0.4s;
+   text-align: center;
+ }
+ 
+ .close-btn {
+   float: right;
+   color: lightgray;
+   font-size: 24px;
+   font-weight: bold;
+ }
+ 
+ .close-btn:hover {
+   color: darkgray;
+ }
+ 
+ @-webkit-keyframes animatetop {
+   from {
+     top: -300px;
+     opacity: 0
+   }
+   to {
+     top: 0;
+     opacity: 1
+   }
+ }
+ 
+ @keyframes animatetop {
+   from {
+     top: -300px;
+     opacity: 0
+   }
+   to {
+     top: 0;
+     opacity: 1
+   }
+ }
+ 
+ .modalNumButtons {
+   border-radius: 2em;
+   width: 60px;
+   height: 60px;
+   background-color: white;
+   font-display: bolder;
+   margin: 5px;
+   font-size: large;
+   margin-top: 10px;
+ }
+ .carousel-item{
+   height: 100%;
+ }
+ .modalAdvanceButtons {
+   border: 1px solid white;
+   width: max-content;
+   color: white;
+   padding: 3px;
+   margin: 5px;
+   margin-top: 10px;
+   font-display: bold;
+   font-size: large;
+   border-radius: .5em;
+ }
+ 
+ .modalAdvanceButtons:visited {
+   border: 1px solid black;
+   border-radius: .5em;
+   color: black;
+ }
+ 
+ #reset {
+   width: max-content;
+   color: black;
+   background: white;
+   padding: 10px;
+   margin: auto;
+   font-display: bolder;
+   font-size: large;
+   border-radius: .5em;
+ }
+ #search{
+   background-image: url("images.jfif");
+ }
+ 
+ .mainSearchButton, .openbtn{
+   background: rgba(240, 197, 57, 0.938);
+   border-radius: 1em;
+   color: black;
+   font-display: bolder;
+   font-size: medium;
+ }
+ 
+ .sidebar {
+   height: 100%;
+   width: 0;
+   background-color: #333;
+   overflow-x: hidden;
+   transition: 0.5s;
+ }
+ .bottom-bar {
+   height: 0;
+   width: 100%;
+   background-color: #333;
+   overflow-x: hidden;
+   transition: 0.5s;
+ }
+ .cmc-col{
+   margin:0 auto;
+ }
+ .curve-col{
+   padding-right: 10px;
+   padding-left: 10px;
+ }
+
+ .sidebar div {
+   display:block;
+   text-decoration: none;
+   font-size: 14px;
+   color: #818181;
+   transition: 0.3s;
+ }
+ .bottom-bar div {
+   text-decoration: none;
+   font-size: 14px;
+   color: #818181;
+   transition: 0.3s;
+ }
+ 
+ .sidebar div:hover {
+   color: #f1f1f1;
+ }
+ 
+ .sidebar .closebtn {
+   position: relative;
+   bottom: 80%;
+   left: 25px;
+   font-size: 36px;
+   margin-right: 50px;
+ }
+ .bottom-bar button{
+   margin-top: 100px;
+
+ }
+ 
+  .saveButton {
+   position: relative;
+   bottom: 80%;
+   Right: 35px;
+   margin-left: 75px;
+   width: 100px;
+   height: 80;
+   background: rgba(240, 197, 57, 0.938);
+   border-radius: 1em;
+   color: black;
+   font-display: bold;
+   font-size: medium;
+ }
+ 
+ body {
+   background-color: black;
+ }
+ 
+ .modal {
+   display: none;
+   position: fixed;
+   padding-top: 50px;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgb(0, 0, 0);
+   background-color: rgba(0, 0, 0, 0.5);
+ }
+ 
+ .modal-content {
+   position: relative;
+   background-color: rgba(0, 0, 0, 0.5);
+   padding: 20px;
+   margin: auto;
+   width: 70%;
+   height: 70%;
+   -webkit-animation-name: animatetop;
+   -webkit-animation-duration: 0.4s;
+   animation-name: animatetop;
+   animation-duration: 0.4s;
+   text-align: center;
+ }
+ 
+ .close-btn {
+   float: right;
+   color: lightgray;
+   font-size: 24px;
+   font-weight: bold;
+ }
+ 
+ .close-btn:hover {
+   color: darkgray;
+ }
+ 
+ @-webkit-keyframes animatetop {
+   from {
+     top: -300px;
+     opacity: 0
+   }
+   to {
+     top: 0;
+     opacity: 1
+   }
+ }
+ 
+ @keyframes animatetop {
+   from {
+     top: -300px;
+     opacity: 0
+   }
+   to {
+     top: 0;
+     opacity: 1
+   }
+ }
+ 
+ .modalNumButtons {
+   border: 5px solid white;
+   border-radius: 2em;
+   width: 60px;
+   height: 60px;
+   background-color: white;
+   font-display: bolder;
+   margin: 5px;
+   font-size: large;
+   margin-top: 10px;
+ }
+ 
+   .mainSearchButton {
+     background: rgba(240, 197, 57, 0.938);
+     border-radius: 1em;
+     color: black;
+     font-display: bolder;
+     font-size: medium;
+   }
+   body {
+     background-color: black;
+   }
+   h2 {
+     color: white;
+   }
+   button {
+     margin:5px;
+   }
+   .found {
+     margin-left: 20px;
+
+   }
+   .carousel-control-next{
+     z-index: 101;
+     width:50px;
+   }
+   .carousel-control-prev{
+     z-index: 101;
+     width:50px;
+   }
+   .carousel-item{
+     margin:0 auto;
+     height:800px;
+   }
+   .carousel-item:hover{
+     z-index: 100;
+   }
+   .modal-color-button {
+     border: solid 5px;
+     border-color: white;
+     border-radius: 50%;
+   }
+   .nav-filter {
+     border: solid 3px;
+     border-color: white;
+     border-radius: 50%;
+   }
+   .number-filter:focus {
+     border: solid 5px;
+     border-color: gold;
+     border-radius: 50%;
+   }
+   .type-filter:focus {
+     border: solid 3px;
+     border-color: gold;
+     border-radius: .5em;
+   }
+   .rarity-filter:focus {
+     border: solid 3px;
+     border-color: gold;
+     border-radius: .5em;
+   }
+   .set-filter:focus {
+     border: solid 3px;
+     border-color: gold;
+     border-radius: .5em;
+   }
+   .btn{
+     border-radius: 10%;
+   }
+   .card-button{
+     margin-top:-8px;
+     margin-left:-5px;
+     width: 240px;
+     height:340px;
+     position: absolute;
+    clip: rect(10px,231px,33px,9px);
+
+       }
+       
+
+   .card-counter{
+     color:black;
+     border:solid grey 2px;
+     border-radius: 30%;
+     background-color: #a5a4a4;
+     margin-right:-1px;
+     margin-top:1px;
+     padding-top:5px;
+     text-align: center;
+     padding-top: 3px;
+     font-size: 24;
+     width:25px;
+     height:25px;
+   }
+   .card-counter:hover{
+     font-size: 18px;
+     font-weight: 800;
+   }
+   .copy-text{
+     
+     color:rgb(3, 86, 211);
+     font-size: 24px;
+     font-weight: 700;
+     text-align: right;
+     margin-left: 60%;
+   }
+   .deck-count{
+     color:white;
+     margin-left: 50px;
+   }
+   .curve-col{
+     pointer-events: none;
+   }
+   .remove-from-deck{
+     pointer-events: all;
+   }
+   .export-bottom{
+     position:fixed;
+     bottom:20px;
+     right:50px;
+     visibility: hidden;
+     z-index: 100;
+   }
+   #message{
+     position: absolute;
+     top:-120px;
+     height:200px;
+     width:100%;
+     color:white;
+   }
+   .modal-message{
+     margin:0 auto;
+     width:80px;
+     height:50px;
+   }
+ 
